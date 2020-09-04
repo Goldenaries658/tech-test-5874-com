@@ -1,6 +1,6 @@
-import React from 'react';
-import './css/main.css';
-import Header from './sections/header';
+import React from "react";
+import "./css/main.css";
+import Header from "./sections/header";
 
 function App() {
   return (
