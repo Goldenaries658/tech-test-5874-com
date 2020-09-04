@@ -24,4 +24,26 @@ h1 {
 
 p {
   font-family: 'Decker';
+.cta-link {
+  margin-top: 2rem;
+  border-bottom: 3px solid #c0345e;
+  width: fit-content;
+
+  a {
+    font: 700 0.9rem/1.6rem Open Sans;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.7s;
+
+  &:hover,
+  &:active {
+    transform: translateY(-3px);
+  }
 }
