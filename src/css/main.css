@@ -17,6 +17,7 @@
 h1 {
   font: 600 2.5rem/2.9rem Decker;
   letter-spacing: 1.3px;
+  white-space: nowrap;
 }
 
 h1 span {
@@ -24,7 +25,10 @@ h1 span {
 }
 
 p {
-  font-family: 'Decker';
+  font: 1rem/1.5rem Open sans;
+  color: #506473;
+}
+
 .cta-link {
   margin-top: 2rem;
   border-bottom: 3px solid #c0345e;
