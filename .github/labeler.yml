@@ -1,0 +1,22 @@
+# Config file for labeler to auto label PRs
+documentation:
+  - README.md
+  - docs/**/*
+
+UI/UX:
+  - '**/*.css'
+  - '**/*.html'
+
+automation:
+  - .github/**/*.yml
+  - .eslintrc.json
+
+npm packages:
+  - '**/package.json'
+  - '**/package-lock.json'
+
+components:
+  - src/components/**/*.js
+
+pages:
+  - src/pages/**/*.js
