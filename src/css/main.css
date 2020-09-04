@@ -1,1 +1,7 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.App {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 10vh;
+      grid-template-rows: 10vh;
+}
+/*# sourceMappingURL=main.css.map */
