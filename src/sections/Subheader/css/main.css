@@ -22,9 +22,21 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-self: center;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.subheader .info-text em {
+  font: 600 0.9rem/3rem Open Sans;
+  letter-spacing: -0.4px;
+  color: #c0345e;
+  opacity: 0.75;
+}
+
+.subheader .info-text h1 {
+  margin: 0.8em 0;
 }
 
 .subheader img {

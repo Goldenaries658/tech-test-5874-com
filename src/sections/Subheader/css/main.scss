@@ -8,7 +8,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    justify-self: center;
+    width: min-content;
+
+    em {
+      font: 600 0.9rem/3rem Open Sans;
+      letter-spacing: -0.4px;
+      color: #c0345e;
+      opacity: 0.75;
+    }
+
+    h1 {
+      margin: 0.8em 0;
+    }
+
   }
 
   img {
