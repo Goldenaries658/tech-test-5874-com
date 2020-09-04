@@ -1,7 +1,29 @@
+@font-face {
+  font-family: 'Decker';
+  src: url("./font/Decker.ttf.woff") format("woff"), url("./font/Decker.ttf.svg#Decker") format("svg"), url("./font/Decker.ttf.eot"), url("./font/Decker.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10vh;
-      grid-template-rows: 10vh;
+  -ms-grid-rows: 10vh 1fr 1fr 1fr;
+      grid-template-rows: 10vh 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+  font: 600 2.5rem/2.9rem Decker;
+  letter-spacing: 1.3px;
+}
+
+h1 span {
+  color: #506473;
+}
+
+p {
+  font-family: 'Decker';
 }
 /*# sourceMappingURL=main.css.map */
