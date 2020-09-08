@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './css/main.css';
+import './css/header.css';
 import logo from './images/digital-spaniel-logo-01.png';
 import Nav from './Nav';
 

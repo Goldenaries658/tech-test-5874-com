@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/main.css';
+import './css/subheader.css';
 import headerImg from './images/Spaniel01_gradient@2x.png';
 
 export default function SubHeader() {
