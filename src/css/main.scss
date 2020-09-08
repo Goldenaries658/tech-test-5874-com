@@ -37,6 +37,25 @@ p {
   color: #506473;
 }
 
+.info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  width: min-content;
+  padding: 2vh 0;
+
+  em {
+    font: 600 0.9rem/3rem Open Sans;
+    letter-spacing: -0.4px;
+    color: #dc3769d9;
+  }
+
+  h1 {
+    margin: 0.8em 0;
+  }
+}
+
 .cta-link {
   margin-top: 2rem;
   border-bottom: 3px solid #c0345e;
