@@ -11,12 +11,16 @@ header {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 4vw;
-  padding-top: 3vh;
+  padding: 0.5vw 4vw;
+  -webkit-backdrop-filter: blur(3px) brightness(100%);
+          backdrop-filter: blur(3px) brightness(100%);
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 header img {
