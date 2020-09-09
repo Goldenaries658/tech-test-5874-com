@@ -1,5 +1,5 @@
 header {
-  height: 10vh;
+  height: 8vh;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
@@ -14,7 +14,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0.5vw 4vw;
+  padding: 0.5vh 4vw;
   -webkit-backdrop-filter: blur(3px) brightness(100%);
           backdrop-filter: blur(3px) brightness(100%);
   -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -23,7 +23,6 @@ header {
   transition: top 0.3s;
 }
 
-header img {
 @media (max-width: 800px) {
   header {
     background: #fff;
@@ -31,6 +30,7 @@ header img {
   }
 }
 
+header #logo {
   height: 100%;
   margin-left: 5%;
 }
@@ -39,6 +39,14 @@ header img {
   header #logo {
     margin-left: 0;
   }
+}
+
+header #hamburger {
+  height: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 7%;
 }
 
 header nav {
@@ -66,5 +74,50 @@ header nav ul li {
 
 header nav ul li:hover, header nav ul li:active {
   border-bottom: 3px solid #fff;
+}
+
+#slider {
+  background: #edeff1;
+  height: 100vh;
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  -webkit-transition: right 0.3s;
+  transition: right 0.3s;
+}
+
+#slider nav {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#slider nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 33vh;
+  margin-top: 7vh;
+}
+
+#slider nav ul li {
+  font: 600 1rem/1.2rem Open Sans;
 }
 /*# sourceMappingURL=header.css.map */

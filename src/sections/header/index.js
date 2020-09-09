@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './css/header.css';
 import logo from './images/digital-spaniel-logo-01.png';
 import hamburger from './images/hamburger.svg';
 import Nav from './Nav';
-import NavMob from './Hamburger';
 
 export default function Header({ breakpoints }) {
   const [scroll, setScroll] = useState({
     prevPosition: window.pageYOffset,
     isVisible: true,
   });
+
+  const [sliderIsActive, setSliderIsActive] = useState(false);
 
   // Adding event listener on component mount
   useEffect(() => {
@@ -37,18 +38,39 @@ export default function Header({ breakpoints }) {
 
   const isDesktop = window.innerWidth > breakpoints.md;
 
+  const sliderRef = useRef(null);
+
+  const toggleSlider = (newState) => {
+    console.log('toggle');
+    // Focussing slider on open for onBlur
+    if (!sliderIsActive) sliderRef.current.focus();
+    setSliderIsActive(newState);
+  };
+
   return (
     <React.Fragment>
-      <header style={scroll.isVisible ? { top: '0px' } : { top: '-120px' }}>
+      <header style={{ top: scroll.isVisible ? '0px' : '-120px' }}>
         <img id="logo" src={logo} alt="Digital Spaniel Logo" />
         {isDesktop ? (
           <Nav />
         ) : (
-          <img id="hamburger" src={hamburger} alt="Menu icon" />
+          <img
+            id="hamburger"
+            src={hamburger}
+            alt="Menu icon"
+            onClick={(e) => toggleSlider(true)}
+          />
         )}
       </header>
       {!isDesktop && (
-        <div id="slider">
+        <div
+          id="slider"
+          ref={sliderRef}
+          tabIndex="1"
+          style={{ right: sliderIsActive ? '0px' : '-170px' }}
+          onClick={(e) => toggleSlider(false)}
+          onBlur={(e) => toggleSlider(false)}
+        >
           <Nav />
         </div>
       )}

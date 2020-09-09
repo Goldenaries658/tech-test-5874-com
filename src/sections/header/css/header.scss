@@ -1,4 +1,5 @@
 @import '../../../css/_breakpoints';
+
 header {
   height: 8vh;
   grid-row: 1 / 2;
@@ -20,6 +21,7 @@ header {
     padding: 1vh 0;
   }
 
+  #logo {
     height: 100%;
     margin-left: 5%;
 
@@ -51,6 +53,36 @@ header {
         &:active {
           border-bottom: 3px solid #fff;
         }
+      }
+    }
+  }
+}
+
+#slider {
+  background: #edeff1;
+  height: 100vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: right 0.3s;
+
+  nav {
+    align-self: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 33vh;
+      margin-top: 7vh;
+
+      li {
+        font: 600 1rem/1.2rem Open Sans;
       }
     }
   }
