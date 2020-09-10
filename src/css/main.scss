@@ -18,12 +18,13 @@ html {
 
 .App {
   display: grid;
-  grid-template-rows: 10vh 1fr 1fr 1fr;
+  grid-template-rows: 10vh 1fr 0.7fr 1fr;
   grid-template-columns: repeat(2, 1fr);
 }
 
 h1 {
   font: 600 2.5rem/2.9rem Decker;
+  color: #19293a;
   letter-spacing: 1.3px;
   white-space: nowrap;
 
