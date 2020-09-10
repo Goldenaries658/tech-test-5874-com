@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Nav({ isScrolled }) {
   const linkColour = isScrolled ? '#000' : '#fff';
@@ -6,14 +7,35 @@ export default function Nav({ isScrolled }) {
     color: linkColour,
   };
 
-  const navLinks = ['Services', 'Work', 'About', 'Blog', 'Contact'];
+  const navLinks = [
+    {
+      title: 'Services',
+      url: 'services',
+    },
+    {
+      title: 'Work',
+      url: 'work',
+    },
+    {
+      title: 'About',
+      url: 'about',
+    },
+    {
+      title: 'Blog',
+      url: 'blog',
+    },
+    {
+      title: 'Contact',
+      url: 'contact',
+    },
+  ];
 
   return (
     <nav>
       <ul>
         {navLinks.map((link) => (
-          <li key={link} style={dynamicNavStyling}>
-            <a href={`#${link.toLowerCase()}`}>{link}</a>
+          <li key={link.title} style={dynamicNavStyling}>
+            <Link to={link.url}>{link.title}</Link>
           </li>
         ))}
       </ul>
