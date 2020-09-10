@@ -1,7 +1,95 @@
+@font-face {
+  font-family: 'Decker';
+  src: url("./font/Decker.ttf.woff") format("woff"), url("./font/Decker.ttf.svg#Decker") format("svg"), url("./font/Decker.ttf.eot"), url("./font/Decker.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 10px;
+  }
+}
+
 .App {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 10vh;
-      grid-template-rows: 10vh;
+  -ms-grid-rows: 10vh 1fr 0.7fr 1fr;
+      grid-template-rows: 10vh 1fr 0.7fr 1fr;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+h1 {
+  font: 600 2.5rem/2.9rem Decker;
+  color: #19293a;
+  letter-spacing: 1.3px;
+  white-space: nowrap;
+}
+
+h1 span {
+  color: #506473;
+}
+
+p {
+  font: 1rem/1.5rem Open sans;
+  color: #506473;
+}
+
+.info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 2vh 0;
+}
+
+.info-text em {
+  font: 600 0.9rem/3rem Open Sans;
+  letter-spacing: -0.4px;
+  color: #dc3769d9;
+}
+
+.info-text h1 {
+  margin: 0.8em 0;
+}
+
+.cta-link {
+  margin-top: 2rem;
+  border-bottom: 3px solid #c0345e;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cta-link a {
+  font: 700 0.9rem/1.6rem Open Sans;
+  color: #000;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+a:hover, a:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,40 @@
+#blog {
+  background: #edeff1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  grid-gap: 2rem;
+  padding: 5vh 10vw;
+}
+
+#blog .back-arrow {
+  height: 0.1em;
+  width: 0.1em;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  vertical-align: middle;
+}
+
+#blog .back-arrow:hover, #blog .back-arrow:active {
+  -webkit-transform: rotate(135deg) translateX(4px) translateY(4px);
+          transform: rotate(135deg) translateX(4px) translateY(4px);
+}
+
+#blog article {
+  background: #fff;
+  padding: 3rem;
+  -webkit-box-shadow: 6px 6px 10px 0px #ccc;
+          box-shadow: 6px 6px 10px 0px #ccc;
+}
+
+#blog article h2 {
+  font: 1.5rem/3rem Open sans;
+}
+/*# sourceMappingURL=blog.css.map */
