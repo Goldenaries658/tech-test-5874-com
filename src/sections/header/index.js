@@ -1,16 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './css/header.css';
+import breakpoints from '../../config/breakpoints.json';
 import logo from './images/digital-spaniel-logo-01.png';
 import hamburger from './images/hamburger.svg';
 import Nav from './Nav';
 
-export default function Header({ breakpoints }) {
+export default function Header() {
   const [scroll, setScroll] = useState({
     prevPosition: window.pageYOffset,
     isVisible: true,
   });
 
   const [sliderIsActive, setSliderIsActive] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(
+    window.innerWidth > breakpoints.md
+  );
 
   // Adding event listener on component mount
   useEffect(() => {
@@ -28,15 +32,19 @@ export default function Header({ breakpoints }) {
       });
     };
 
+    // Responsively dealing with screen resizing
+    const updateWindowDimensions = () => {
+      setIsDesktop((state) => window.innerWidth > breakpoints.md);
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', updateWindowDimensions);
 
     // Removing on unmount, for future proofing in case more pages are added
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const isDesktop = window.innerWidth > breakpoints.md;
 
   const sliderRef = useRef(null);
 
@@ -67,7 +75,7 @@ export default function Header({ breakpoints }) {
           id="slider"
           ref={sliderRef}
           tabIndex="1"
-          style={{ right: sliderIsActive ? '0px' : '-170px' }}
+          style={{ right: sliderIsActive ? '0px' : '-330px' }}
           onClick={(e) => toggleSlider(false)}
           onBlur={(e) => toggleSlider(false)}
         >
