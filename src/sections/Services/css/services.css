@@ -1,4 +1,4 @@
-.services {
+#services {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
@@ -12,7 +12,7 @@
   background: #edeff1;
 }
 
-.services .links {
+#services .links {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[2];
@@ -24,7 +24,7 @@
       align-self: center;
 }
 
-.services .links figure {
+#services .links figure {
   padding: 10% 20%;
   white-space: nowrap;
   width: -webkit-fill-available;
@@ -32,30 +32,30 @@
   width: stretch;
 }
 
-.services .links figure figcaption {
+#services .links figure figcaption {
   color: #19293a;
   font: bold 1.2rem/2.2rem Decker;
   letter-spacing: 2px;
 }
 
-.services .links figure li {
+#services .links figure li {
   color: #506473;
   font: 600 1.2rem/3rem Open Sans;
 }
 
-.services .links figure li a {
+#services .links figure li a {
   -webkit-transition: none;
   transition: none;
   -webkit-transform: none;
           transform: none;
 }
 
-.services .links figure li:hover img, .services .links figure li:active img {
+#services .links figure li:hover img, #services .links figure li:active img {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.services .links figure li img {
+#services .links figure li img {
   height: 1em;
   vertical-align: middle;
   padding-left: 0.4em;

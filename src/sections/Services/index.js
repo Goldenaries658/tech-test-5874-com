@@ -4,7 +4,7 @@ import arrowIcon from './images/arrow-icon.svg';
 
 export default function Services() {
   return (
-    <section className="services">
+    <section id="services">
       <article className="info-text">
         <h1>
           What are

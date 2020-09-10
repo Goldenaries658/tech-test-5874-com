@@ -1,6 +1,6 @@
 @import '../../../css/_breakpoints';
 
-.subheader {
+#subheader {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-row: 1 / 3;
@@ -10,12 +10,12 @@
     height: auto;
     width: stretch;
    
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $md) {
       padding-top: 3vh;
     }
   }
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $md) {
     grid-row: 2 / 3;
   }
 }

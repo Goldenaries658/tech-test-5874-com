@@ -4,7 +4,7 @@ import headerImg from './images/Spaniel01_gradient@2x.png';
 
 export default function SubHeader() {
   return (
-    <section className="subheader">
+    <section id="subheader">
       <article className="info-text">
         <em>BRAND, DEV, ECOM, MARKETING</em>
 
