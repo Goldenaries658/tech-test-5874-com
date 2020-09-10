@@ -11,7 +11,7 @@
 }
 
 html {
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $sm) {
     font-size: 10px;
   }
 }
