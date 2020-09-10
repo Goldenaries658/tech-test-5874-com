@@ -9,14 +9,11 @@ header {
   justify-content: space-between;
   padding: 0.5vh 4vw;
 
-  backdrop-filter: blur(3px) brightness(100%);
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  // For hiding and adding background colour on scroll
+  // positioning set in component itself
+  transition: background-color 0.3s ease, top 0.3s ease;
 
-  // For hiding on scroll, positioning set in component itself
-  transition: top 0.3s;
-
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $md) {
     background: #fff;
     padding: 1vh 0;
   }
@@ -47,11 +44,10 @@ header {
         font: 600 1rem/1.2rem Open Sans;
         letter-spacing: 0px;
         border-bottom: 3px solid transparent;
-        color: #fff;
 
         &:hover,
         &:active {
-          border-bottom: 3px solid #fff;
+          border-bottom: 3px solid;
         }
       }
     }

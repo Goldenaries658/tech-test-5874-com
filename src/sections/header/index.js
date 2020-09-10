@@ -9,8 +9,8 @@ export default function Header() {
   const [scroll, setScroll] = useState({
     prevPosition: window.pageYOffset,
     isVisible: true,
+    isScrolled: false,
   });
-
   const [sliderIsActive, setSliderIsActive] = useState(false);
   const [isDesktop, setIsDesktop] = useState(
     window.innerWidth > breakpoints.md
@@ -24,10 +24,12 @@ export default function Header() {
         const currentPosition = window.pageYOffset;
 
         const isVisible = prevPosition > currentPosition;
+        const isScrolled = currentPosition !== 0;
 
         return {
           prevPosition: currentPosition,
           isVisible,
+          isScrolled,
         };
       });
     };
@@ -55,12 +57,18 @@ export default function Header() {
     setSliderIsActive(newState);
   };
 
+  const dynamicHeaderStyles = {
+    top: scroll.isVisible ? '0px' : '-120px',
+    background: scroll.isScrolled ? '#eee' : 'none',
+    boxShadow: scroll.isScrolled ? '0px 1px 6px 0px black' : 'none',
+  };
+
   return (
-    <React.Fragment>
-      <header style={{ top: scroll.isVisible ? '0px' : '-120px' }}>
+    <>
+      <header style={dynamicHeaderStyles}>
         <img id="logo" src={logo} alt="Digital Spaniel Logo" />
         {isDesktop ? (
-          <Nav />
+          <Nav isScrolled={scroll.isScrolled} />
         ) : (
           <img
             id="hamburger"
@@ -82,6 +90,6 @@ export default function Header() {
           <Nav />
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 }

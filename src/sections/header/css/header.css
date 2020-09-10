@@ -15,12 +15,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5vh 4vw;
-  -webkit-backdrop-filter: blur(3px) brightness(100%);
-          backdrop-filter: blur(3px) brightness(100%);
-  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
+  -webkit-transition: background-color 0.3s ease, top 0.3s ease;
+  transition: background-color 0.3s ease, top 0.3s ease;
 }
 
 @media (max-width: 800px) {
@@ -69,11 +65,10 @@ header nav ul li {
   font: 600 1rem/1.2rem Open Sans;
   letter-spacing: 0px;
   border-bottom: 3px solid transparent;
-  color: #fff;
 }
 
 header nav ul li:hover, header nav ul li:active {
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid;
 }
 
 #slider {
