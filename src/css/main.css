@@ -47,11 +47,11 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-self: center;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   padding: 2vh 0;
+  margin-left: 25%;
 }
 
 .info-text em {
