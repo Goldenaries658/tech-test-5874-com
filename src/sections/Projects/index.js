@@ -5,6 +5,8 @@ import mackerel from './images/mackerel.png';
 import newspaper from './images/newspaper.png';
 import newspaper02 from './images/newspaper02.png';
 import rider01 from './images/rider01.png';
+import angleLeftIcon from './images/angle-left.svg';
+import angleRightIcon from './images/angle-right.svg';
 
 export default function Projects() {
   const images = [
@@ -76,6 +78,22 @@ export default function Projects() {
           />
         ))}
       </div>
+
+      <footer className="mosaic-footer">
+        <div className="cta-link">
+          <a href="#">See all work</a>
+        </div>
+
+        <div className="mosaic-pagination">
+          <div className="left-arrow-icon">
+            <img src={angleLeftIcon} alt="Left arrow icon" />
+          </div>
+
+          <div className="right-arrow-icon">
+            <img src={angleRightIcon} alt="Right arrow icon" />
+          </div>
+        </div>
+      </footer>
     </section>
   );
 }
