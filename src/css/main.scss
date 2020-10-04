@@ -18,7 +18,6 @@ html {
 
 .App {
   display: grid;
-  grid-template-rows: 10vh 1fr 0.7fr 1fr;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -44,7 +43,6 @@ p {
   justify-content: center;
   width: min-content;
   padding: 2vh 0;
-  margin-left: 25%;
 
   em {
     font: 600 0.9rem/3rem Open Sans;

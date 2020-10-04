@@ -12,6 +12,19 @@
   background: #edeff1;
 }
 
+@media (min-width: 450px) {
+  #services {
+    padding: 0 12.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  #services .info-text {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 #services .links {
   display: -ms-grid;
   display: grid;
