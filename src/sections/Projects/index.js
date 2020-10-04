@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './css/projects.css';
 import wellies01 from './images/wellies01.png';
 import mackerel from './images/mackerel.png';
