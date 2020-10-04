@@ -11,14 +11,13 @@
 }
 
 html {
-  @media (max-width: $sm) {
+  @media (max-width: $md) {
     font-size: 10px;
   }
 }
 
 .App {
   display: grid;
-  grid-template-rows: 10vh 1fr 0.7fr 1fr;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -42,7 +41,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-self: center;
   width: min-content;
   padding: 2vh 0;
 

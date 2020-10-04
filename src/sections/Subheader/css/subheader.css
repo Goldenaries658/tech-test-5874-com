@@ -11,6 +11,19 @@
   grid-column: 1 / 3;
 }
 
+@media (min-width: 450px) {
+  #subheader .info-text {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 450px) {
+  #subheader .info-text {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 #subheader img {
   height: auto;
   width: -webkit-fill-available;
